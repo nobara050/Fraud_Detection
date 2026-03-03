@@ -1,6 +1,6 @@
 ## Graph-based Fraud Detection (IEEE-CIS)
 
-This project implements **fraud detection on transaction graphs** using **Graph Neural Networks (GNNs)** with **PyTorch** and **DGL**, based on the [IEEE-CIS Fraud Detection](https://www.kaggle.com/c/ieee-fraud-detection/data) dataset.
+This project implements **fraud detection on transaction graphs** using **Graph Neural Networks (GNNs)** with **PyTorch** (PyTorch Geometric for heterogeneous graphs), based on the [IEEE-CIS Fraud Detection](https://www.kaggle.com/c/ieee-fraud-detection/data) dataset.
 
 The idea is to model transactions, cards, devices, emails, IPs, etc. as nodes in a **heterogeneous graph**, connect them with edges that represent their relationships, and train a GNN to classify whether a transaction is fraudulent or not.
 
@@ -30,7 +30,7 @@ Notebooks are executed **in order**:
 
 1. `00_*.ipynb` – environment setup, data loading, basic EDA.  
 2. `01_*.ipynb` – preprocessing and feature engineering, save processed data to `data/`.  
-3. `02_*.ipynb` – graph construction and GNN training (DGL + PyTorch), save models to `model/`.  
+3. `02_*.ipynb` – graph construction and GNN training (PyTorch Geometric), save models to `model/`.  
 4. `03_*.ipynb` – evaluation and visualization, export result plots to `content/`.
 
 ---
@@ -40,15 +40,9 @@ Notebooks are executed **in order**:
 The project can run on **Google Colab**, **Kaggle Notebooks**, or local Python:
 
 Main libraries:
-- Python 3.x, PyTorch, DGL  
+- Python 3.12.12, PyTorch 2.9.0, PyTorch Geometric  
 - NumPy, pandas, scikit-learn  
 - Matplotlib / Seaborn
-
-Example (local):
-
-```bash
-pip install torch dgl numpy pandas scikit-learn matplotlib seaborn
-```
 
 ---
 
@@ -58,12 +52,7 @@ Due to strong class imbalance, the focus is on **balancing precision and recall*
 
 - Metrics: ROC-AUC, precision, recall, F1-score, confusion matrix.  
 - Logs and numeric results are stored in `output/` (e.g. `results.txt`).
-- Interactive graph visualizations are stored as HTML files in `content/` and can be opened in a browser:
-  - [Schema graph](content/schema_graph.html)  
-  - [Subgraph example](content/subgraph.html)
-
-If you export image files (e.g. ROC curve, PR curve, training curves) into the `output/` folder, they will be rendered directly in this README.  
-For example, with files like `output/roc_curve.png` and `output/pr_curve.png`:
+- Interactive graph visualizations are stored as HTML files in `content/` 
 
 <p align="center">
   <img src="output/roc_curve.png" alt="ROC curve" width="380" />
