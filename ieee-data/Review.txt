@@ -1,0 +1,23 @@
+================
+Thông tin các cột bảng transaction
+- TransactionID
+- isFraud
+- TransactionDT
+- TransactionAmt
+- ProductCD
+- card1 - 6
+- addr1 - 2
+- dist1 - 2
+- P_emaildomain
+- R_emaildomain
+- C1 - 14
+- D1 - 15
+- M1 - 9
+- V1 - 339
+
+================
+Thông tin các cột bảng identity
+- TransactionID
+- id-01 - 38
+- DeviceType
+- DeviceInfo
