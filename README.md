@@ -3,7 +3,9 @@
 This project implements **fraud detection on transaction graphs** using **Graph Neural Networks (GNNs)** with **PyTorch** (PyTorch Geometric for heterogeneous graphs), based on the [IEEE-CIS Fraud Detection](https://www.kaggle.com/c/ieee-fraud-detection/data) dataset.
 
 The idea is to model transactions, cards, devices, emails, IPs, etc. as nodes in a **heterogeneous graph**, connect them with edges that represent their relationships, and train a GNN to classify whether a transaction is fraudulent or not.
-
+<p align="center">
+  <img src="output/graph_intro.png" alt="ROC curve" width="600" />
+</p>
 ---
 
 ## Dataset
