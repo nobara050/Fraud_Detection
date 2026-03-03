@@ -62,5 +62,13 @@ Due to strong class imbalance, the focus is on **balancing precision and recall*
   - [Schema graph](content/schema_graph.html)  
   - [Subgraph example](content/subgraph.html)
 
+If you export image files (e.g. ROC curve, PR curve, training curves) into the `output/` folder, they will be rendered directly in this README.  
+For example, with files like `output/roc_curve.png` and `output/pr_curve.png`:
+
+<p align="center">
+  <img src="output/roc_curve.png" alt="ROC curve" width="380" />
+  <img src="output/pr_curve.png" alt="PR curve" width="380" />
+</p>
+
 Performance may vary depending on configuration (hyperparameters, random seed, hardware), but the project demonstrates an end-to-end **graph-based fraud detection pipeline** on a real-world dataset using modern GNN techniques.
 
